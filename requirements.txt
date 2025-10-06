@@ -1,0 +1,17 @@
+torch>=2.0.0
+torchaudio>=2.0.0
+transformers>=4.30.0
+sounddevice>=0.4.6
+numpy>=1.24.0
+scipy>=1.10.0
+librosa>=0.10.0
+gradio>=3.35.0
+streamlit>=1.25.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+webrtcvad>=2.0.10
+noisereduce>=3.0.0
+datasets>=2.12.0
+evaluate>=0.4.0
+jiwer>=3.0.0
+pyaudio>=0.2.11
