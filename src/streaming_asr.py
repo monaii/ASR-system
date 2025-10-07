@@ -11,8 +11,13 @@ from typing import Callable, Optional, Dict, List
 from dataclasses import dataclass
 from collections import deque
 
-from .audio_processing import AudioCapture, AudioPreprocessor, StreamingBuffer
-from .models import ASRModel
+try:
+    from .audio_processing import AudioCapture, AudioPreprocessor, StreamingBuffer
+    from .models import ASRModel
+except ImportError:
+    # Fallback for direct execution
+    from audio_processing import AudioCapture, AudioPreprocessor, StreamingBuffer
+    from models import ASRModel
 
 
 @dataclass
@@ -249,6 +254,12 @@ class StreamingASR:
         else:
             metrics['voice_activity_ratio'] = 0.0
             
+        # Ensure average_latency is calculated correctly
+        if metrics['transcriptions'] > 0:
+            metrics['average_latency'] = metrics['total_inference_time'] / metrics['transcriptions']
+        else:
+            metrics['average_latency'] = 0.0
+            
         return metrics
         
     def clear_history(self):
@@ -320,7 +331,10 @@ class MultiModelASR:
 
 if __name__ == "__main__":
     # Test streaming ASR
-    from .models import get_model
+    try:
+        from .models import get_model
+    except ImportError:
+        from models import get_model
     
     print("Testing streaming ASR...")
     
