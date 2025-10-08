@@ -69,3 +69,4 @@ logs/
 *.ptevaluation_report_*.json
 evaluation_report_*.json
 test_*.wav
+reports/
