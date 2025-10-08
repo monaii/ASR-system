@@ -67,3 +67,5 @@ logs/
 # PyTorch
 *.pth
 *.ptevaluation_report_*.json
+evaluation_report_*.json
+test_*.wav
