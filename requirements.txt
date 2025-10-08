@@ -1,5 +1,15 @@
 torch>=2.0.0
 torchaudio>=2.0.0
+transformers>=4.38.0
+librosa>=0.10.0
+sounddevice>=0.4.6
+scipy>=1.10.0
+numpy>=1.24.0
+noisereduce>=2.0.0
+webrtcvad>=2.0.10
+gradio>=4.30.0
+streamlit>=1.30.0
+torchaudio>=2.0.0
 transformers>=4.30.0
 sounddevice>=0.4.6
 numpy>=1.24.0
