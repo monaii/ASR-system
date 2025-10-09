@@ -24,8 +24,3 @@ Project Structure
 
 Notes
 - `.gitignore` excludes generated reports and test WAVs.
-- Commit messages are plain (no emojis).
-
-Next (optional)
-- Add CI to run tests (e.g., GitHub Actions).
-- Extend UI with enhanced preprocessing profiles and latency display.
